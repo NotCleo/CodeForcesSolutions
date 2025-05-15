@@ -1,3 +1,3 @@
 # CodeForcesSolutions
 
-This repo holds whatever I solve in my free time (Disclaimer : Not a pro!)
+This repo will be updated with whatever I solved in my free time (Disclaimer : Not a pro!)
