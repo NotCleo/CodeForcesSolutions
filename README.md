@@ -1,3 +1,3 @@
 # CodeForcesSolutions
 
-This repo will be updated with whatever I solved in my free time (Disclaimer : Not a pro!)
+This repo will be updated with whatever easy stuff I solved in my first year (Disclaimer : Not a pro!)
