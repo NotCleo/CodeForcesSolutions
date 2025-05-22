@@ -1,0 +1,127 @@
+# Using `time.h` for Measuring Execution Time in C
+
+The `time.h` library in C provides functions to measure the execution time of a program or specific parts of it.
+
+## 1. Including the Library
+```c
+#include <time.h>
+
+Key Functions and Variables
+
+    clock_t: A type defined in time.h to store processor time
+
+    clock(): Returns the processor time consumed by the program (in clock ticks)
+
+    CLOCKS_PER_SEC: A macro representing the number of clock ticks per second
+
+clock_t start, end;
+double cpu_time_used;
+
+start = clock(); // Capture start time
+
+// Your code to measure
+while (t--) {
+    // ... logic ...
+}
+
+
+end = clock(); // Capture end time
+
+cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
+
+printf("Execution time: %f seconds\n", cpu_time_used);
+
+
+Example : 
+
+#include <stdio.h>
+#include <time.h>
+
+int main() {
+    clock_t start, end;
+    double cpu_time_used;
+
+    start = clock(); // Start timing
+
+    // Code to measure
+    for (int i = 0; i < 1000000; i++) {
+        // Simulate work
+    }
+
+    end = clock(); // End timing
+    cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
+
+    printf("Time taken: %f seconds\n", cpu_time_used);
+    return 0;
+}
+
+
+
+
+Common Techniques
+    Measuring Specific Code Blocks:
+    
+    start = clock();
+    // Code block to measure
+    end = clock();
+
+    
+    
+    Averaging Multiple Runs:
+    
+    double total_time = 0;
+    for (int i = 0; i < 10; i++) {
+        start = clock();
+        // Code to measure
+        end = clock();
+        total_time += ((double)(end - start)) / CLOCKS_PER_SEC;
+    }
+    printf("Average time: %f seconds\n", total_time / 10);
+
+
+    
+
+    Comparing Algorithms:
+    start = clock();
+    algorithm1();
+    end = clock();
+    double time1 = ((double)(end - start)) / CLOCKS_PER_SEC;
+    
+    start = clock();
+    algorithm2();
+    end = clock();
+    double time2 = ((double)(end - start)) / CLOCKS_PER_SEC;
+    
+    printf("Algorithm 1: %f sec\nAlgorithm 2: %f sec\n", time1, time2);
+
+
+
+Limitations
+
+    Resolution: clock() measures CPU time, not wall-clock time
+
+    Overhead: The clock() function itself has a small overhead
+
+
+Key Takeaways
+
+    Use clock() for CPU time measurements
+
+    Use time() for wall-clock time
+
+    Use CLOCKS_PER_SEC for time conversions
+
+    Techniques include:
+
+        Isolating code blocks
+
+        Averaging multiple runs
+
+        Comparing algorithms
+
+
+
+
+
+
+
