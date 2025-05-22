@@ -30,3 +30,7 @@ Some useful things I learnt :
         It uses number-theory tricks to skip directly to relevant values via modular arithmetic and division rules.
     
         Threading adds unnecessary overhead and complexity when input-output must be strictly ordered.
+
+
+4) See Code 11 : I was unable to get it to work in under 1 second for some of the testcases, so I applied timer.h to figure that out, see exclusive1.c file
+
