@@ -36,3 +36,5 @@ Some useful things I learnt :
 
 5) See Code 15 : I got too naive in the matrix rotation that one ends up rotation without a temporary variable, leading to overwriting values and ending with a complete scalar matrix
 
+6) Whenever dealing with any sum of digits problem, study the testcases that'll help with building a structured plan and avoid massive iterations
+
