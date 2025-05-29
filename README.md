@@ -34,3 +34,5 @@ Some useful things I learnt :
 
 4) See Code 11 : I was unable to get it to work in under 1 second for some of the testcases, so I applied timer.h to figure that out, see Exclusive1.txt file
 
+5) See Code 15 : I got too naive in the matrix rotation that one ends up rotation without a temporary variable, leading to overwriting values and ending with a complete scalar matrix
+
